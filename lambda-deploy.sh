@@ -8,7 +8,8 @@ start=$(date +%s)
 
 for arg; do
     
-    functionName="$arg-$env"
+    # functionName="$arg-$env" // Use this line if staging environment is to be prepended or appended
+    functionName = $arg
     zipPath="fileb://$arg/src/Archive.zip"
     printf "${GREEN}DEPLOYING $functionName\n${NC}"
 
